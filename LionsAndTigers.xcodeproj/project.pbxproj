@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		C919E0AF1A6A142C009DA8D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C919E0AE1A6A142C009DA8D4 /* main.m */; };
 		C919E0B21A6A142C009DA8D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C919E0B11A6A142C009DA8D4 /* AppDelegate.m */; };
-		C919E0B51A6A142C009DA8D4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C919E0B41A6A142C009DA8D4 /* ViewController.m */; };
+		C919E0B51A6A142C009DA8D4 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C919E0B41A6A142C009DA8D4 /* RootViewController.m */; };
 		C919E0B81A6A142C009DA8D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C919E0B61A6A142C009DA8D4 /* Main.storyboard */; };
 		C919E0BA1A6A142C009DA8D4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C919E0B91A6A142C009DA8D4 /* Images.xcassets */; };
 		C919E0BD1A6A142C009DA8D4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C919E0BB1A6A142C009DA8D4 /* LaunchScreen.xib */; };
 		C919E0C91A6A142C009DA8D4 /* LionsAndTigersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C919E0C81A6A142C009DA8D4 /* LionsAndTigersTests.m */; };
 		C919E0DA1A6A1669009DA8D4 /* TopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C919E0D91A6A1669009DA8D4 /* TopViewController.m */; };
 		C919E0DD1A6A168B009DA8D4 /* HUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C919E0DC1A6A168B009DA8D4 /* HUDViewController.m */; };
+		C9D462361A6B080D00DD2CC6 /* CustomColletionViewCellCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D462351A6B080D00DD2CC6 /* CustomColletionViewCellCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +35,8 @@
 		C919E0AE1A6A142C009DA8D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C919E0B01A6A142C009DA8D4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C919E0B11A6A142C009DA8D4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C919E0B31A6A142C009DA8D4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C919E0B41A6A142C009DA8D4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C919E0B31A6A142C009DA8D4 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		C919E0B41A6A142C009DA8D4 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		C919E0B71A6A142C009DA8D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C919E0B91A6A142C009DA8D4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C919E0BC1A6A142C009DA8D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -46,6 +47,8 @@
 		C919E0D91A6A1669009DA8D4 /* TopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TopViewController.m; path = ../TopViewController.m; sourceTree = "<group>"; };
 		C919E0DB1A6A168B009DA8D4 /* HUDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDViewController.h; sourceTree = "<group>"; };
 		C919E0DC1A6A168B009DA8D4 /* HUDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUDViewController.m; sourceTree = "<group>"; };
+		C9D462341A6B080D00DD2CC6 /* CustomColletionViewCellCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomColletionViewCellCollectionViewCell.h; sourceTree = "<group>"; };
+		C9D462351A6B080D00DD2CC6 /* CustomColletionViewCellCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomColletionViewCellCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,13 +92,15 @@
 			children = (
 				C919E0D81A6A1669009DA8D4 /* TopViewController.h */,
 				C919E0D91A6A1669009DA8D4 /* TopViewController.m */,
-				C919E0B31A6A142C009DA8D4 /* ViewController.h */,
-				C919E0B41A6A142C009DA8D4 /* ViewController.m */,
+				C919E0B31A6A142C009DA8D4 /* RootViewController.h */,
+				C919E0B41A6A142C009DA8D4 /* RootViewController.m */,
 				C919E0DB1A6A168B009DA8D4 /* HUDViewController.h */,
 				C919E0DC1A6A168B009DA8D4 /* HUDViewController.m */,
 				C919E0B01A6A142C009DA8D4 /* AppDelegate.h */,
 				C919E0B11A6A142C009DA8D4 /* AppDelegate.m */,
 				C919E0B61A6A142C009DA8D4 /* Main.storyboard */,
+				C9D462341A6B080D00DD2CC6 /* CustomColletionViewCellCollectionViewCell.h */,
+				C9D462351A6B080D00DD2CC6 /* CustomColletionViewCellCollectionViewCell.m */,
 				C919E0B91A6A142C009DA8D4 /* Images.xcassets */,
 				C919E0BB1A6A142C009DA8D4 /* LaunchScreen.xib */,
 				C919E0AC1A6A142C009DA8D4 /* Supporting Files */,
@@ -231,8 +236,9 @@
 			files = (
 				C919E0DD1A6A168B009DA8D4 /* HUDViewController.m in Sources */,
 				C919E0DA1A6A1669009DA8D4 /* TopViewController.m in Sources */,
-				C919E0B51A6A142C009DA8D4 /* ViewController.m in Sources */,
+				C919E0B51A6A142C009DA8D4 /* RootViewController.m in Sources */,
 				C919E0B21A6A142C009DA8D4 /* AppDelegate.m in Sources */,
+				C9D462361A6B080D00DD2CC6 /* CustomColletionViewCellCollectionViewCell.m in Sources */,
 				C919E0AF1A6A142C009DA8D4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

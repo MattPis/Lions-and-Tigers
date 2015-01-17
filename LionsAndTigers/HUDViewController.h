@@ -6,14 +6,20 @@
 //  Copyright (c) 2015 Matt. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "RootViewController.h"
 
-@protocol HUDDelegate <NSObject>
+@protocol HudViewControllerDelegate <NSObject>
+
+@optional
+-(void)changeToLions;
+-(void)changeToTigers;
 
 @end
 
-@interface HUDViewController : ViewController
 
-@property id<HUDDelegate>delegate;
+
+@interface HUDViewController : RootViewController
+@property id<HudViewControllerDelegate>delegate;
+
 
 @end

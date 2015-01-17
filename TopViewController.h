@@ -6,17 +6,22 @@
 //  Copyright (c) 2015 Matt. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "RootViewController.h"
 
 @protocol TopDelegate
 
+@optional
 -(void)topRevealButtonTapped;
+
 
 @end
 
+@interface TopViewController : RootViewController{
+    NSMutableArray *animalsArray;
+}
 
-@interface TopViewController : ViewController
 @property id<TopDelegate>delegate;
 
-
+-(void)displayLions;
+-(void)displayTigers;
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "TopViewController.h"
+#import "CustomColletionViewCellCollectionViewCell.h"
 
 @interface TopViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -21,16 +22,20 @@
 }
 
 - (IBAction)hamburgerTapped:(id)sender {
-    [self topRevealButtonTapped];
     [self.delegate topRevealButtonTapped];
 }
 
 
 #pragma mark delegate
 
--(void)topRevealButtonTapped{
-
+-(void)displayTigers{
+    NSLog(@"tigers");
 }
+
+-(void)displayLions{
+    NSLog(@"lions");
+}
+
 #pragma mark collectionView
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -40,8 +45,7 @@
 
 -(UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     //init cell
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor lightGrayColor];
+    CustomColletionViewCellCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellID" forIndexPath:indexPath];
 
 
 

@@ -7,6 +7,7 @@
 //
 
 #import "HUDViewController.h"
+#import "RootViewController.h"
 
 @interface HUDViewController ()
 
@@ -16,13 +17,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+   
 }
 #pragma mark actions
 
 - (IBAction)lionsButtonTapped:(id)sender {
+    [self.delegate changeToLions];
 
 }
 - (IBAction)tigersButtonTapped:(id)sender {
+    [self.delegate changeToTigers];
 
 }
 
