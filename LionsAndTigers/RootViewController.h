@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol RootDelegate <NSObject>
 
+@optional
+-(void)loadTigers;
+-(void)loadLions;
+@end
 @interface RootViewController : UIViewController
 
+@property (weak) id<RootDelegate>delegate;
 
 @end
 

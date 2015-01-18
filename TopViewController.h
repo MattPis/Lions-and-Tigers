@@ -6,8 +6,7 @@
 //  Copyright (c) 2015 Matt. All rights reserved.
 //
 
-#import "RootViewController.h"
-
+#import <UIKit/UIKit.h>
 @protocol TopDelegate
 
 @optional
@@ -16,12 +15,8 @@
 
 @end
 
-@interface TopViewController : RootViewController{
-    NSMutableArray *animalsArray;
-}
+@interface TopViewController : UIViewController
+@property(weak, nonatomic) id<TopDelegate>delegate;
 
-@property id<TopDelegate>delegate;
 
--(void)displayLions;
--(void)displayTigers;
 @end

@@ -8,7 +8,7 @@
 #import "HUDViewController.h"
 #import "RootViewController.h"
 
-@interface RootViewController ()<TopDelegate, HudViewControllerDelegate>
+@interface RootViewController ()<TopDelegate, HudViewControllerDelegate, RootDelegate>
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftPin;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *rightpin;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topPin;
@@ -16,8 +16,9 @@
 @end
 
 @implementation RootViewController
-
+@synthesize delegate;
 - (void)viewDidLoad {
+
     [super viewDidLoad];
 
 }
@@ -39,29 +40,28 @@
 
     }
 }
+#pragma mark HUDViewController delegate;
+-(void)changeToLions{
+    [self.delegate loadLions];
+
+}
+-(void)changeToTigers{
+    [self.delegate loadTigers];
+}
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"TopSegue"]) {
         UINavigationController *navC = segue.destinationViewController;
         TopViewController *tvc = navC.childViewControllers[0];
-        tvc.delegate= self;
-        NSLog(@"topSegue");
+        tvc.delegate = self;
+        self.delegate = tvc;
+
+
     }
     else if ([segue.identifier isEqualToString:@"HUDSegue"]){
-        NSLog(@"bottomSegue");
         HUDViewController *hVC = segue.destinationViewController;
         hVC.delegate = self;
     }
-    
-}
-#pragma mark HUDViewController delegate;
--(void)changeToLions{
-    TopViewController *Tvc = [[TopViewController alloc]init];
-    [Tvc displayLions];
 
-}
--(void)changeToTigers{
-    TopViewController *Tvc = [[TopViewController alloc]init];
-    [Tvc displayTigers];
 }
 
 

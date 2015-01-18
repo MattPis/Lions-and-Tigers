@@ -42,6 +42,7 @@
                             <constraint firstItem="u0u-iF-WVn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="n53-sS-OUI"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Y68-7k-L4A"/>
                     <connections>
                         <outlet property="leftPin" destination="d4i-8A-vJH" id="qXB-u1-Cvd"/>
                         <outlet property="rightpin" destination="keM-PG-LKc" id="EFt-ur-f4t"/>
@@ -119,7 +120,7 @@
                         <viewControllerLayoutGuide type="bottom" id="uJl-OB-wyc"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="wRU-ah-opB">
-                        <rect key="frame" x="0.0" y="44" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Nce-or-KYH">
@@ -132,14 +133,14 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellID" id="iz3-at-76K" customClass="CustomColletionViewCellCollectionViewCell">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="iz3-at-76K" customClass="CustomCollectionViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="160" height="148"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rBb-6S-X2M">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Tg-wm-hHV">
                                                     <rect key="frame" x="0.0" y="0.0" width="160" height="148"/>
                                                 </imageView>
                                             </subviews>
@@ -147,7 +148,7 @@
                                         </view>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <outlet property="imageView" destination="rBb-6S-X2M" id="vL4-0c-4by"/>
+                                            <outlet property="imageView" destination="2Tg-wm-hHV" id="z18-oy-pPZ"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -180,6 +181,7 @@
                             </button>
                             <connections>
                                 <action selector="hamburgerTapped:" destination="Dbz-mO-BJ8" id="w8i-c4-lsM"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="Root" id="FCo-XR-FMh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -189,7 +191,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GiM-7d-VGp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1998" y="83"/>
+            <point key="canvasLocation" x="1941" y="514"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ol8-0N-Kzn">

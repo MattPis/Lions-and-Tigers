@@ -7,10 +7,14 @@
 //
 
 #import "TopViewController.h"
-#import "CustomColletionViewCellCollectionViewCell.h"
+#import "CustomCollectionViewCell.h"
+#import "RootViewController.h"
 
-@interface TopViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
+
+@interface TopViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, TopDelegate, RootDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property NSMutableArray *animalsArray;
+
 
 @end
 
@@ -18,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self loadTigers];
 
 }
 
@@ -28,27 +33,37 @@
 
 #pragma mark delegate
 
--(void)displayTigers{
-    NSLog(@"tigers");
+-(void)loadTigers{
+    self.animalsArray = [NSMutableArray arrayWithObjects:@"tiger",@"tiger2",@"tiger3"@"tiger4",@"tiger5",@"tiger",@"tiger2",@"tiger3"@"tiger4",@"tiger5",nil];
+    [self.collectionView reloadData];
+    NSLog(@"displayTigers");
+
+
 }
 
--(void)displayLions{
-    NSLog(@"lions");
+-(void)loadLions{
+
+    self.animalsArray = [NSMutableArray arrayWithObjects:@"lion",@"lion2",@"lion3"@"lion4",@"lion5"@"lion",@"lion2",@"lion3"@"lion4",@"lion5",nil];
+    [self.collectionView reloadData];
+    NSLog(@"displayLions");
+
+
 }
+-(void)topRevealButtonTapped{
+}
+
 
 #pragma mark collectionView
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
 
-    return 12;
+    return self.animalsArray.count ;
 }
 
 -(UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    //init cell
-    CustomColletionViewCellCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellID" forIndexPath:indexPath];
-
-
-
+    CustomCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    cell.imageView.image = [UIImage imageNamed:[self.animalsArray objectAtIndex:indexPath.row]];
+    cell.backgroundColor = [UIColor lightGrayColor];
     return cell;
 
    }
@@ -70,4 +85,15 @@
 {
     [self.collectionView performBatchUpdates:nil completion:nil];
 }
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+        TopViewController *hVC = segue.destinationViewController;
+        hVC.delegate = self;
+    NSLog(@"log");
+
+}
+
+
+
 @end

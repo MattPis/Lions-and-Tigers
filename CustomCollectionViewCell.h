@@ -1,5 +1,5 @@
 //
-//  CustomColletionViewCellCollectionViewCell.h
+//  CustomCollectionViewCell.h
 //  LionsAndTigers
 //
 //  Created by Matt on 1/17/15.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CustomColletionViewCellCollectionViewCell : UICollectionViewCell
+@interface CustomCollectionViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end

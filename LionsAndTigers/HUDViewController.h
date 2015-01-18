@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Matt. All rights reserved.
 //
 
-#import "RootViewController.h"
+#import <UIKit/UIKit.h>
 
 @protocol HudViewControllerDelegate <NSObject>
 
@@ -18,7 +18,7 @@
 
 
 
-@interface HUDViewController : RootViewController
+@interface HUDViewController : UIViewController
 @property id<HudViewControllerDelegate>delegate;
 
 
