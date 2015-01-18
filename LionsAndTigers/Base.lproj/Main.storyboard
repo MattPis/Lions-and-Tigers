@@ -66,11 +66,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79L-pj-g0U">
-                                <rect key="frame" x="16" y="60" width="110" height="92"/>
+                                <rect key="frame" x="16" y="60" width="147" height="127"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="92" id="YwA-9o-G4u"/>
-                                    <constraint firstAttribute="width" constant="110" id="y41-DS-beJ"/>
+                                    <constraint firstAttribute="height" constant="127" id="YwA-9o-G4u"/>
+                                    <constraint firstAttribute="width" constant="147" id="y41-DS-beJ"/>
                                 </constraints>
                                 <inset key="contentEdgeInsets" minX="1" minY="1" maxX="1" maxY="1"/>
                                 <state key="normal" image="lion">
@@ -81,11 +81,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQN-gz-hKz">
-                                <rect key="frame" x="16" y="168" width="110" height="92"/>
+                                <rect key="frame" x="16" y="209" width="147" height="131"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="92" id="9M2-Wm-ya6"/>
-                                    <constraint firstAttribute="width" constant="110" id="UGb-yh-qyq"/>
+                                    <constraint firstAttribute="height" constant="131" id="9M2-Wm-ya6"/>
+                                    <constraint firstAttribute="width" constant="147" id="UGb-yh-qyq"/>
                                 </constraints>
                                 <inset key="contentEdgeInsets" minX="1" minY="1" maxX="1" maxY="1"/>
                                 <state key="normal" title="Tigers" image="tiger">
@@ -98,7 +98,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="aQN-gz-hKz" firstAttribute="top" secondItem="79L-pj-g0U" secondAttribute="bottom" constant="16" id="0Dk-qE-GQf"/>
+                            <constraint firstItem="aQN-gz-hKz" firstAttribute="top" secondItem="79L-pj-g0U" secondAttribute="bottom" constant="22" id="0Dk-qE-GQf"/>
                             <constraint firstItem="aQN-gz-hKz" firstAttribute="leading" secondItem="UAQ-XN-qtR" secondAttribute="leadingMargin" id="OMb-ve-x9a"/>
                             <constraint firstItem="79L-pj-g0U" firstAttribute="top" secondItem="ZOA-hC-kfg" secondAttribute="bottom" constant="60" id="qvL-RV-VRu"/>
                             <constraint firstItem="79L-pj-g0U" firstAttribute="leading" secondItem="UAQ-XN-qtR" secondAttribute="leadingMargin" id="y3g-87-vzf"/>
@@ -140,13 +140,19 @@
                                             <rect key="frame" x="0.0" y="0.0" width="160" height="148"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Tg-wm-hHV">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Tg-wm-hHV">
                                                     <rect key="frame" x="0.0" y="0.0" width="160" height="148"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottomMargin" secondItem="2Tg-wm-hHV" secondAttribute="bottom" constant="-8" id="B2f-uf-Lmg"/>
+                                            <constraint firstItem="2Tg-wm-hHV" firstAttribute="leading" secondItem="iz3-at-76K" secondAttribute="leadingMargin" constant="-8" id="Ztu-JJ-One"/>
+                                            <constraint firstItem="2Tg-wm-hHV" firstAttribute="top" secondItem="iz3-at-76K" secondAttribute="topMargin" constant="-8" id="eCe-x3-EiX"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="2Tg-wm-hHV" secondAttribute="trailing" constant="-8" id="gO2-y5-1Zm"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="imageView" destination="2Tg-wm-hHV" id="z18-oy-pPZ"/>
                                         </connections>

@@ -8,10 +8,9 @@
 
 #import "TopViewController.h"
 #import "CustomCollectionViewCell.h"
-#import "RootViewController.h"
 
 
-@interface TopViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, TopDelegate, RootDelegate>
+@interface TopViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, TopDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property NSMutableArray *animalsArray;
 
@@ -22,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self loadTigers];
+    [self displayTigers];
 
 }
 
@@ -33,25 +32,20 @@
 
 #pragma mark delegate
 
--(void)loadTigers{
-    self.animalsArray = [NSMutableArray arrayWithObjects:@"tiger",@"tiger2",@"tiger3"@"tiger4",@"tiger5",@"tiger",@"tiger2",@"tiger3"@"tiger4",@"tiger5",nil];
+-(void)displayTigers{
+    self.animalsArray = [NSMutableArray new];
+    self.animalsArray = [NSMutableArray arrayWithObjects:@"tiger",@"tiger2",@"tiger3"@"tiger4",@"tiger5",nil];
     [self.collectionView reloadData];
-    NSLog(@"displayTigers");
-
-
+    NSLog(@"tigers");
 }
 
--(void)loadLions{
-
-    self.animalsArray = [NSMutableArray arrayWithObjects:@"lion",@"lion2",@"lion3"@"lion4",@"lion5"@"lion",@"lion2",@"lion3"@"lion4",@"lion5",nil];
+-(void)displayLions{
+    self.animalsArray = [NSMutableArray new];
+    self.animalsArray = [NSMutableArray arrayWithObjects:@"lion",@"lion2",@"lion3"@"lion4",@"lion5",nil];
     [self.collectionView reloadData];
-    NSLog(@"displayLions");
-
+    NSLog(@"Lions");
 
 }
--(void)topRevealButtonTapped{
-}
-
 
 #pragma mark collectionView
 

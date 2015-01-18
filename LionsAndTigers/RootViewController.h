@@ -7,16 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TopViewController.h"
 
-@protocol RootDelegate <NSObject>
 
-@optional
--(void)loadTigers;
--(void)loadLions;
-@end
 @interface RootViewController : UIViewController
+@property (weak) TopViewController *topViewController;
 
-@property (weak) id<RootDelegate>delegate;
 
 @end
 

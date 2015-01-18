@@ -12,11 +12,11 @@
 @optional
 -(void)topRevealButtonTapped;
 
-
 @end
 
 @interface TopViewController : UIViewController
-@property(weak, nonatomic) id<TopDelegate>delegate;
+@property id<TopDelegate>delegate;
 
-
+-(void)displayTigers;
+-(void)displayLions;
 @end

@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface CustomCollectionViewCell : UICollectionViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property IBOutlet UIImageView *imageView;
 
 @end
