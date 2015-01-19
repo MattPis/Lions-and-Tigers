@@ -12,7 +12,7 @@
 
 
 
-@interface TopViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, TopDelegate, cellDelegate>
+@interface TopViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, TopDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property NSMutableArray *animalsArray;
 
@@ -66,9 +66,7 @@
 
    }
 
--(void)collectionView:(UICollectionView *)collectionView didEndDisplayingCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath{
-    [self.cell animate];
-}
+
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
 
     UIImageView *imageView = [[UIImageView alloc]init];
