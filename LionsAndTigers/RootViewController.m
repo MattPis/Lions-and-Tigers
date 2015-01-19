@@ -25,8 +25,8 @@
 -(void)topRevealButtonTapped{
 
     if (self.leftPin.constant==-16) {
-        self.leftPin.constant = 130;
-        self.rightpin.constant = -160;
+        self.leftPin.constant = 180;
+        self.rightpin.constant = -220;
         self.topPin.constant = -20;
         [UIView animateWithDuration:0.5 animations:^{[self.view layoutIfNeeded];}];
 

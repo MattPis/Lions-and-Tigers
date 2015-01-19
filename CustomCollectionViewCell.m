@@ -10,4 +10,14 @@
 
 @implementation CustomCollectionViewCell
 
+
+-(void)animate{
+    NSLog(@"animate");
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:2];
+    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.imageView cache:YES];
+    [UIView commitAnimations];
+
+}
+
 @end

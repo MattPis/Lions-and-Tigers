@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomCollectionViewCell.h"
+
 @protocol TopDelegate
 
 @optional
@@ -16,6 +18,7 @@
 
 @interface TopViewController : UIViewController
 @property id<TopDelegate>delegate;
+@property CustomCollectionViewCell *cell;
 
 -(void)displayTigers;
 -(void)displayLions;
